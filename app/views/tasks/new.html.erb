@@ -1,0 +1,14 @@
+<h1>Nueva tarea</h1>
+
+<%= form_with(model: @task, url: tasks_new_path,remote: true) do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.submit "Crear tarea" %>
+  </div>
+<% end %>
+
+<%# <%= link_to "Volver a la lista de tareas", tasks_path %> %>
